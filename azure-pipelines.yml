@@ -6,7 +6,7 @@
 trigger:
 - master
 
-
+pool: 'CodeWayAWSLinux'
 
 steps:
 - task: Npm@1
@@ -33,4 +33,3 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-
