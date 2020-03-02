@@ -9,11 +9,15 @@ trigger:
 pool: 'CodeWayAWSLinux'
 
 steps:
-- task: Npm@1
-  displayName: npm install
+- task: CmdLine@2
+  displayName: Globally install TFX
   inputs:
-    command: 'install'
-    workingDir: 'buildAndReleaseTask'
+    script: 'sudo yum install nodejs npm --enablerepo=epel'
+#- task: Npm@1
+#  displayName: npm install
+#  inputs:
+#    command: 'install'
+#    workingDir: 'buildAndReleaseTask'
 - task: CmdLine@2
   displayName: Globally install TFX
   inputs:
