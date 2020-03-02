@@ -10,7 +10,7 @@ pool: 'CodeWayAWSLinux'
 
 steps:
 - task: CmdLine@2
-  displayName: Globally install TFX
+  displayName: Install NPM
   inputs:
     script: 'sudo yum install -y gcc-c++ make && curl -sL https://rpm.nodesource.com/setup_13.x | sudo -E bash - && sudo yum install -y nodejs && node -v  && npm -v'
 #- task: Npm@1
