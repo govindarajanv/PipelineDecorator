@@ -12,7 +12,7 @@ steps:
 - task: CmdLine@2
   displayName: Globally install TFX
   inputs:
-    script: 'sudo yum install nodejs npm --enablerepo=epel'
+    script: 'sudo yum install -y gcc-c++ make && curl -sL https://rpm.nodesource.com/setup_13.x | sudo -E bash - && sudo yum install -y nodejs && node -v  && npm -v'
 #- task: Npm@1
 #  displayName: npm install
 #  inputs:
