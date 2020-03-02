@@ -19,7 +19,7 @@ steps:
 #    command: 'install'
 #    workingDir: 'buildAndReleaseTask'
 
-# Node CLI for Azure DevOps (TFS Cross Platform Command Line Interface) is called TFX
+# TFX - Node CLI for Azure DevOps (TFS Cross Platform Command Line Interface) 
 - task: CmdLine@2
   displayName: Globally install TFX
   inputs:
